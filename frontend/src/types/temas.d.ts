@@ -1,0 +1,16 @@
+export const TEMAS_DIREITO: string[] = [
+  'CÍVEL',
+  'PENAL',
+  'TRABALHISTA',
+  'ADMINISTRATIVO',
+  'TRIBUTÁRIO',
+  'PREVIDENCIÁRIO',
+  'CONSUMIDOR',
+  'FAMÍLIA',
+  'AMBIENTAL',
+  'EMPRESARIAL',
+  'ELEITORAL',
+  'IMOBILIÁRIO',
+  'MILITAR',
+  'DIGITAL'
+]

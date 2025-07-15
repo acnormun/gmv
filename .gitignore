@@ -1,6 +1,4 @@
 .venv
 venv/
-backend
-
-frontend
 node_modules
+dist

@@ -20,9 +20,8 @@
     "pack": "electron-builder --dir",
     "clean": "rimraf dist build",
     "setup": "node setup.js",
-    "check": "node setup.js",
     "install-deps": "npm install && cd backend && pip install -r requirements.txt",
-    "build-frontend": "cd gmv-web && npm install && npm run build",
+    "build-frontend": "cd frontend && npm install && npm run build",
     "build-all": "npm run build-frontend && npm run build"
   },
   "keywords": [
@@ -58,6 +57,7 @@
       "gmv-server/**/*",
       "frontend/dist/**/*",
       "gmv-web/dist/**/*",
+      "assets/**/*",
       "node_modules/**/*",
       "package.json",
       "!node_modules/.cache/**/*"

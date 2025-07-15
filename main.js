@@ -13,6 +13,7 @@ const FRONTEND_DEV_URL = `http://localhost:${FRONTEND_DEV_PORT}`;
 
 let backendProcess = null;
 let mainWindow = null;
+let loadingWindow = null;
 let isQuitting = false;
 
 const isPackaged = app.isPackaged;
@@ -190,6 +191,34 @@ async function checkFrontendDev() {
     }
 }
 
+function createLoadingWindow() {
+    log('Abrindo janela de carregamento...');
+    loadingWindow = new BrowserWindow({
+        width: 300,
+        height: 200,
+        frame: false,
+        resizable: false,
+        show: false,
+        webPreferences: {
+            contextIsolation: true,
+            devTools: false
+        }
+    });
+    const loadingPath = path.join(__dirname, 'assets', 'loading.html');
+    loadingWindow.loadFile(loadingPath)
+        .then(() => {
+            if (loadingWindow) {
+                loadingWindow.show();
+            }
+        })
+        .catch(err => {
+            log(`Erro ao carregar loading: ${err.message}`);
+        });
+    loadingWindow.on('closed', () => {
+        loadingWindow = null;
+    });
+}
+
 async function createWindow() {
     log('Criando janela principal...');
     const frontendDevRunning = await checkFrontendDev();
@@ -237,6 +266,9 @@ async function createWindow() {
     }
     mainWindow.once('ready-to-show', () => {
         mainWindow.show();
+        if (loadingWindow) {
+            loadingWindow.close();
+        }
         if (isDev) {
             mainWindow.webContents.openDevTools();
         }
@@ -279,6 +311,7 @@ async function cleanupProcesses() {
 app.whenReady(async () => {
     try {
         log('Electron pronto, iniciando aplicação...');
+        createLoadingWindow();
         log('Iniciando backend...');
         backendProcess = await startBackend();
         log('Aguardando backend...');
@@ -317,6 +350,7 @@ app.on('before-quit', async (event) => {
 
 app.on('activate', async () => {
     if (BrowserWindow.getAllWindows().length === 0) {
+        createLoadingWindow();
         await createWindow();
     }
 });

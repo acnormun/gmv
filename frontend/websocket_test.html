@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Teste WebSocket Debug</title>
+    <script src="https://cdn.socket.io/4.7.0/socket.io.min.js"></script>
+</head>
+<body>
+    <h1>Teste WebSocket GMV</h1>
+    <div id="status">Desconectado</div>
+    <button onclick="testConnection()">Conectar</button>
+    <button onclick="testListening()">Testar start_listening</button>
+    <div id="logs"></div>
+
+    <script>
+        let socket = null;
+        const logs = document.getElementById('logs');
+        const status = document.getElementById('status');
+
+        function log(message) {
+            console.log(message);
+            logs.innerHTML += `<div>${new Date().toLocaleTimeString()}: ${message}</div>`;
+        }
+
+        function testConnection() {
+            log('🔄 Tentando conectar...');
+            
+            if (socket) {
+                socket.disconnect();
+            }
+
+            socket = io('http://localhost:5000', {
+                transports: ['websocket', 'polling'],
+                timeout: 10000
+            });
+
+            socket.on('connect', () => {
+                status.textContent = 'Conectado';
+                log('✅ WebSocket conectado!');
+            });
+
+            socket.on('disconnect', () => {
+                status.textContent = 'Desconectado';
+                log('❌ WebSocket desconectado');
+            });
+
+            socket.on('progress_update', (data) => {
+                log(`📊 Progresso recebido: ${JSON.stringify(data)}`);
+            });
+
+            socket.on('error', (error) => {
+                log(`❌ Erro: ${error}`);
+            });
+
+            socket.on('connect_error', (error) => {
+                log(`❌ Erro de conexão: ${error}`);
+            });
+        }
+
+        function testListening() {
+            if (!socket || !socket.connected) {
+                log('❌ Socket não conectado!');
+                return;
+            }
+
+            const testOperationId = 'test-' + Date.now();
+            log(`📤 Enviando start_listening para: ${testOperationId}`);
+            
+            socket.emit('start_listening', { operation_id: testOperationId });
+            
+            setTimeout(() => {
+                // Testa envio de progresso manual
+                fetch(`http://localhost:5000/debug/test-progress/${testOperationId}`)
+                    .then(r => r.json())
+                    .then(data => log(`🧪 Resultado teste: ${JSON.stringify(data)}`))
+                    .catch(e => log(`❌ Erro no teste: ${e}`));
+            }, 1000);
+        }
+
+        // Auto-conecta
+        testConnection();
+    </script>
+</body>
+</html>
