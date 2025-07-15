@@ -1,0 +1,147 @@
+{
+  "name": "gmv-app",
+  "version": "1.0.0",
+  "description": "Sistema GMV - Gestão de Processos",
+  "main": "main.js",
+  "homepage": "./",
+  "author": {
+    "name": "GMV Sistema",
+    "email": "contato@gmv.com"
+  },
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "debug": "electron . --dev --inspect",
+    "build": "electron-builder",
+    "build:win": "electron-builder --win",
+    "build:mac": "electron-builder --mac",
+    "build:linux": "electron-builder --linux",
+    "dist": "npm run build",
+    "pack": "electron-builder --dir",
+    "clean": "rimraf dist build",
+    "setup": "node setup.js",
+    "check": "node setup.js",
+    "install-deps": "npm install && cd backend && pip install -r requirements.txt",
+    "build-frontend": "cd gmv-web && npm install && npm run build",
+    "build-all": "npm run build-frontend && npm run build"
+  },
+  "keywords": [
+    "electron",
+    "gmv",
+    "processos",
+    "flask",
+    "vue",
+    "desktop"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1",
+    "rimraf": "^5.0.5"
+  },
+  "dependencies": {
+    "tree-kill": "^1.2.2"
+  },
+  "build": {
+    "appId": "com.gmv.app",
+    "productName": "GMV Sistema",
+    "artifactName": "${productName}-${version}-${os}-${arch}.${ext}",
+    "copyright": "Copyright © 2024 GMV Sistema",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "main.js",
+      "setup.js",
+      "backend/**/*",
+      "gmv-server/**/*",
+      "frontend/dist/**/*",
+      "gmv-web/dist/**/*",
+      "node_modules/**/*",
+      "package.json",
+      "!node_modules/.cache/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "backend",
+        "to": "backend",
+        "filter": [
+          "**/*",
+          "!**/__pycache__/**/*",
+          "!**/*.pyc"
+        ]
+      },
+      {
+        "from": "gmv-server",
+        "to": "gmv-server",
+        "filter": [
+          "**/*",
+          "!**/__pycache__/**/*",
+          "!**/*.pyc"
+        ]
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "requestedExecutionLevel": "asInvoker",
+      "publisherName": "GMV Sistema",
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "GMV Sistema",
+      "deleteAppDataOnUninstall": false,
+      "runAfterFinish": true,
+      "installerIcon": "assets/icon.ico",
+      "uninstallerIcon": "assets/icon.ico"
+    },
+    "portable": {
+      "artifactName": "${productName}-${version}-portable.${ext}"
+    },
+    "mac": {
+      "target": "dmg",
+      "category": "public.app-category.productivity",
+      "icon": "assets/icon.icns"
+    },
+    "linux": {
+      "target": [
+        "AppImage",
+        "deb"
+      ],
+      "category": "Office",
+      "icon": "assets/icon.png"
+    },
+    "dmg": {
+      "contents": [
+        {
+          "x": 130,
+          "y": 220
+        },
+        {
+          "x": 410,
+          "y": 220,
+          "type": "link",
+          "path": "/Applications"
+        }
+      ]
+    }
+  }
+}
