@@ -126,6 +126,8 @@ async function startBackend() {
         env: {
             ...process.env,
             PYTHONUNBUFFERED: '1',
+            PYTHONIOENCODING: 'UTF-8',
+            PYTHONUTF8: '1',
             PORT: BACKEND_PORT.toString()
         }
     });
@@ -316,10 +318,6 @@ app.whenReady().then(async () => {
         backendProcess = await startBackend();
         log('Aguardando backend...');
         await waitForBackend(BACKEND_URL);
-        log('Backend pronto, carregando janela principal...')
-        // if(loadingWindow){
-        //     loadingWindow.close()
-        // }
         log('Criando janela...');
         await createWindow();
         log('=== GMV Sistema iniciado com sucesso ===');
