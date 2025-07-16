@@ -18,11 +18,21 @@
     "build:linux": "electron-builder --linux",
     "dist": "npm run build",
     "pack": "electron-builder --dir",
-    "clean": "rimraf dist build",
-    "setup": "node setup.js",
+    "clean": "node clean.js",
+    "clean:build": "rimraf dist build",
+    "setup": "node complete-setup.js",
+    "update": "node update.js",
+    "uninstall": "node uninstall.js",
+    "quick-build": "node quick-build.js",
+    "manager": "node gmv-manager.js",
+    "fix-permissions": "node fix-permissions.js",
     "install-deps": "npm install && cd backend && pip install -r requirements.txt",
     "build-frontend": "cd frontend && npm install && npm run build",
-    "build-all": "npm run build-frontend && npm run build"
+    "build-all": "npm run build-frontend && npm run build",
+    "first-time-setup": "node complete-setup.js",
+    "reinstall": "npm run clean && npm install && npm run setup",
+    "full-clean": "node uninstall.js",
+    "reset": "node clean.js && npm install && npm run setup"
   },
   "keywords": [
     "electron",
@@ -53,6 +63,13 @@
     "files": [
       "main.js",
       "setup.js",
+      "complete-setup.js",
+      "update.js",
+      "uninstall.js",
+      "clean.js",
+      "quick-build.js",
+      "gmv-manager.js",
+      "fix-permissions.js",
       "backend/**/*",
       "gmv-server/**/*",
       "frontend/dist/**/*",
@@ -60,7 +77,8 @@
       "assets/**/*",
       "node_modules/**/*",
       "package.json",
-      "!node_modules/.cache/**/*"
+      "!node_modules/.cache/**/*",
+      "!backup_env/**/*"
     ],
     "extraResources": [
       {
@@ -86,62 +104,32 @@
       "target": [
         {
           "target": "nsis",
-          "arch": [
-            "x64"
-          ]
-        },
-        {
-          "target": "portable",
-          "arch": [
-            "x64"
-          ]
+          "arch": ["x64"]
         }
       ],
-      "requestedExecutionLevel": "asInvoker",
-      "publisherName": "GMV Sistema",
-      "icon": "assets/icon.ico"
+      "icon": "assets/icon.ico",
+      "requestedExecutionLevel": "asInvoker"
     },
     "nsis": {
       "oneClick": false,
-      "perMachine": false,
       "allowToChangeInstallationDirectory": true,
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
       "shortcutName": "GMV Sistema",
-      "deleteAppDataOnUninstall": false,
-      "runAfterFinish": true,
-      "installerIcon": "assets/icon.ico",
-      "uninstallerIcon": "assets/icon.ico"
-    },
-    "portable": {
-      "artifactName": "${productName}-${version}-portable.${ext}"
+      "artifactName": "${productName}-Setup-${version}.${ext}"
     },
     "mac": {
       "target": "dmg",
-      "category": "public.app-category.productivity",
-      "icon": "assets/icon.icns"
+      "icon": "assets/icon.icns",
+      "category": "public.app-category.business"
     },
     "linux": {
       "target": [
         "AppImage",
         "deb"
       ],
-      "category": "Office",
-      "icon": "assets/icon.png"
-    },
-    "dmg": {
-      "contents": [
-        {
-          "x": 130,
-          "y": 220
-        },
-        {
-          "x": 410,
-          "y": 220,
-          "type": "link",
-          "path": "/Applications"
-        }
-      ]
+      "icon": "assets/icon.png",
+      "category": "Office"
     }
   }
 }
