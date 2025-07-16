@@ -31,7 +31,7 @@ class GMVSetup {
             console.log('   npm start        # Modo produção');
             console.log('   npm run dev      # Modo desenvolvimento');
         } else {
-            console.log('\n❌ Alguns problemas foram encontrados. Corrija-os antes de prosseguir.');
+            console.log('\n Alguns problemas foram encontrados. Corrija-os antes de prosseguir.');
         }
     }
 
@@ -53,7 +53,7 @@ class GMVSetup {
             }
         }
         
-        console.log('❌ Python não encontrado!');
+        console.log(' Python não encontrado!');
         console.log('💡 Instale Python 3.8+ em: https://python.org');
         this.results.python = false;
     }
@@ -75,8 +75,8 @@ class GMVSetup {
             
             if (fs.existsSync(appPy)) {
                 console.log(`✅ Backend encontrado: ${backendPath}`);
-                console.log(`   - app.py: ${fs.existsSync(appPy) ? '✅' : '❌'}`);
-                console.log(`   - requirements.txt: ${fs.existsSync(requirementsTxt) ? '✅' : '❌'}`);
+                console.log(`   - app.py: ${fs.existsSync(appPy) ? '✅' : ''}`);
+                console.log(`   - requirements.txt: ${fs.existsSync(requirementsTxt) ? '✅' : ''}`);
                 
                 backendFound = true;
                 this.backendPath = backendPath;
@@ -85,7 +85,7 @@ class GMVSetup {
         }
         
         if (!backendFound) {
-            console.log('❌ Backend não encontrado!');
+            console.log(' Backend não encontrado!');
             console.log('💡 Certifique-se que a pasta gmv-server ou backend existe');
         }
         
@@ -112,8 +112,8 @@ class GMVSetup {
             if (fs.existsSync(packageJson)) {
                 console.log(`✅ Frontend encontrado: ${frontendPath}`);
                 console.log(`   - package.json: ✅`);
-                console.log(`   - dist/: ${fs.existsSync(distPath) ? '✅' : '❌'}`);
-                console.log(`   - dist/index.html: ${fs.existsSync(indexHtml) ? '✅' : '❌'}`);
+                console.log(`   - dist/: ${fs.existsSync(distPath) ? '✅' : ''}`);
+                console.log(`   - dist/index.html: ${fs.existsSync(indexHtml) ? '✅' : ''}`);
                 
                 frontendFound = true;
                 distFound = fs.existsSync(indexHtml);
@@ -123,7 +123,7 @@ class GMVSetup {
         }
         
         if (!frontendFound) {
-            console.log('❌ Frontend não encontrado!');
+            console.log(' Frontend não encontrado!');
             console.log('💡 Certifique-se que a pasta gmv-web ou frontend existe');
         } else if (!distFound) {
             console.log('⚠️ Build do frontend não encontrado');
@@ -140,7 +140,7 @@ class GMVSetup {
         const nodeModules = path.join(__dirname, 'node_modules');
         const electronExists = fs.existsSync(path.join(nodeModules, 'electron'));
         
-        console.log(`   - Electron: ${electronExists ? '✅' : '❌'}`);
+        console.log(`   - Electron: ${electronExists ? '✅' : ''}`);
         
         if (!electronExists) {
             console.log('💡 Execute: npm install');
@@ -155,7 +155,7 @@ class GMVSetup {
                     console.log('💡 Para instalar: pip install -r backend/requirements.txt');
                 }
             } catch (error) {
-                console.log('   - Erro ao verificar requirements.txt ❌');
+                console.log('   - Erro ao verificar requirements.txt ');
             }
         }
         
@@ -174,7 +174,7 @@ class GMVSetup {
         ];
         
         items.forEach(item => {
-            const icon = item.status ? '✅' : '❌';
+            const icon = item.status ? '✅' : '';
             console.log(`${icon} ${item.name}`);
         });
     }

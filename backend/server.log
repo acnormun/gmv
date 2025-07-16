@@ -34688,88 +34688,383 @@ AssertionError: write() before start_response
 2025-07-14 13:33:07,332 - MainThread   - INFO - Pool de threads criado com 15 workers
 2025-07-14 13:33:07,333 - MainThread   - INFO - Aguardando threads finalizarem...
 2025-07-14 13:33:07,334 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
-2025-07-15 17:01:06,015 - MainThread   - INFO - CORS configurado
-2025-07-15 17:01:06,015 - MainThread   - INFO - Rotas registradas
-2025-07-15 17:01:06,015 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
-2025-07-15 17:01:06,015 - MainThread   - INFO - Background cleanup iniciado
-2025-07-15 17:01:06,015 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
-2025-07-15 17:01:06,015 - MainThread   - INFO - Inicialização RAG em background
-2025-07-15 17:01:06,015 - MainThread   - INFO - Servidor pronto!
-2025-07-15 17:01:06,015 - MainThread   - INFO - Processamento paralelo: HABILITADO
-2025-07-15 17:01:06,015 - MainThread   - INFO - WebSocket: Modo threading otimizado
-2025-07-15 17:01:06,015 - MainThread   - INFO - Monitoramento: /api/system/health
-2025-07-15 17:01:06,027 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://192.168.0.82:5000
-2025-07-15 17:01:06,027 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
-2025-07-15 17:01:11,346 - Thread-3 (process_request_thread) - INFO -  0 processos extraídos de ./data/triagem.md
-2025-07-15 17:01:11,348 - Thread-3 (process_request_thread) - INFO - Extraídos 0 processos da tabela
-2025-07-15 17:01:11,356 - Thread-3 (process_request_thread) - INFO - 127.0.0.1 - - [15/Jul/2025 17:01:11] "GET /triagem HTTP/1.1" 200 -
-2025-07-15 17:01:12,687 - Thread-4 (process_request_thread) - INFO - 127.0.0.1 - - [15/Jul/2025 17:01:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
-2025-07-15 17:01:16,632 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
-2025-07-15 17:01:25,450 - MainThread   - INFO - Sinal 2 recebido, encerrando...
-2025-07-15 17:01:25,451 - MainThread   - INFO - Pool de threads criado com 15 workers
-2025-07-15 17:01:25,451 - MainThread   - INFO - Aguardando threads finalizarem...
-2025-07-15 17:01:25,451 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
-2025-07-15 18:55:19,525 - MainThread   - INFO - CORS configurado
-2025-07-15 18:55:19,529 - MainThread   - INFO - Rotas registradas
-2025-07-15 18:55:19,530 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
-2025-07-15 18:55:19,531 - MainThread   - INFO - Background cleanup iniciado
-2025-07-15 18:55:19,532 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
-2025-07-15 18:55:19,532 - MainThread   - INFO - Inicialização RAG em background
-2025-07-15 18:55:19,533 - MainThread   - INFO - Servidor pronto!
-2025-07-15 18:55:19,533 - MainThread   - INFO - Processamento paralelo: HABILITADO
-2025-07-15 18:55:19,533 - MainThread   - INFO - WebSocket: Modo threading otimizado
-2025-07-15 18:55:19,534 - MainThread   - INFO - Monitoramento: /api/system/health
-2025-07-15 18:55:19,547 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
- * Running on all addresses (0.0.0.0)
- * Running on http://127.0.0.1:5000
- * Running on http://192.168.0.82:5000
-2025-07-15 18:55:19,548 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
-2025-07-15 18:55:25,639 - MainThread   - INFO - Sinal 2 recebido, encerrando...
-2025-07-15 18:55:25,647 - MainThread   - INFO - Pool de threads criado com 15 workers
-2025-07-15 18:55:25,653 - MainThread   - INFO - Aguardando threads finalizarem...
-2025-07-15 18:55:25,673 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
-2025-07-16 09:56:20,333 - MainThread   - INFO - CORS configurado
-2025-07-16 09:56:20,341 - MainThread   - INFO - Rotas registradas
-2025-07-16 09:56:20,341 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
-2025-07-16 09:56:20,341 - MainThread   - INFO - Background cleanup iniciado
-2025-07-16 09:56:20,341 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
-2025-07-16 09:56:20,341 - MainThread   - INFO - Inicialização RAG em background
-2025-07-16 09:56:20,346 - MainThread   - INFO - Servidor pronto!
-2025-07-16 09:56:20,346 - MainThread   - INFO - Processamento paralelo: HABILITADO
-2025-07-16 09:56:20,347 - MainThread   - INFO - WebSocket: Modo threading otimizado
-2025-07-16 09:56:20,347 - MainThread   - INFO - Monitoramento: /api/system/health
-2025-07-16 09:56:20,363 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+2025-07-16 10:19:47,301 - MainThread   - INFO - CORS configurado
+2025-07-16 10:19:47,301 - MainThread   - INFO - Rotas registradas
+2025-07-16 10:19:47,301 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-16 10:19:47,301 - MainThread   - INFO - Background cleanup iniciado
+2025-07-16 10:19:47,301 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-16 10:19:47,301 - MainThread   - INFO - Inicialização RAG em background
+2025-07-16 10:19:47,301 - MainThread   - INFO - Servidor pronto!
+2025-07-16 10:19:47,301 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-16 10:19:47,301 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-16 10:19:47,301 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-16 10:19:47,318 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
  * Running on all addresses (0.0.0.0)
  * Running on http://127.0.0.1:5000
  * Running on http://10.0.82.102:5000
-2025-07-16 09:56:20,363 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
-2025-07-16 09:56:21,315 - Thread-3 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 09:56:21] "[33mGET / HTTP/1.1[0m" 404 -
-2025-07-16 09:56:22,298 - Thread-4 (process_request_thread) - ERROR - file:// is not an accepted origin. (further occurrences of this error will be logged with level INFO)
-2025-07-16 09:56:22,298 - Thread-4 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 09:56:22] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
-2025-07-16 09:56:22,350 - Thread-5 (process_request_thread) - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
-2025-07-16 09:56:22,350 - Thread-5 (process_request_thread) - INFO - Extraídos 3 processos da tabela
-2025-07-16 09:56:22,350 - Thread-5 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 09:56:22] "GET /triagem HTTP/1.1" 200 -
-2025-07-16 09:56:23,676 - Thread-7 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 09:56:23] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
-2025-07-16 09:56:26,757 - Thread-8 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 09:56:26] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
-2025-07-16 09:56:30,220 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
-2025-07-16 09:56:31,749 - Thread-9 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 09:56:31] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
-2025-07-16 09:56:37,071 - Thread-10 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 09:56:37] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
-2025-07-16 09:56:39,595 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
-2025-07-16 09:56:39,595 - Thread-2 (init_rag_background) - WARNING - No sentence-transformers model found with name models\paraphrase-MiniLM-L3-v2. Creating a new one with mean pooling.
-2025-07-16 09:56:39,595 - Thread-2 (init_rag_background) - ERROR - Erro ao carregar modelo models\paraphrase-MiniLM-L3-v2: Unrecognized model in models\paraphrase-MiniLM-L3-v2. Should have a `model_type` key in its config.json, or contain one of the following strings in its name: albert, align, altclip, aria, aria_text, audio-spectrogram-transformer, autoformer, aya_vision, bamba, bark, bart, beit, bert, bert-generation, big_bird, bigbird_pegasus, biogpt, bit, bitnet, blenderbot, blenderbot-small, blip, blip-2, blip_2_qformer, bloom, bridgetower, bros, camembert, canine, chameleon, chinese_clip, chinese_clip_vision_model, clap, clip, clip_text_model, clip_vision_model, clipseg, clvp, code_llama, codegen, cohere, cohere2, colpali, conditional_detr, convbert, convnext, convnextv2, cpmant, csm, ctrl, cvt, d_fine, dab-detr, dac, data2vec-audio, data2vec-text, data2vec-vision, dbrx, deberta, deberta-v2, decision_transformer, deepseek_v3, deformable_detr, deit, depth_anything, depth_pro, deta, detr, diffllama, dinat, dinov2, dinov2_with_registers, distilbert, donut-swin, dpr, dpt, efficientformer, efficientnet, electra, emu3, encodec, encoder-decoder, ernie, ernie_m, esm, falcon, falcon_mamba, fastspeech2_conformer, flaubert, flava, fnet, focalnet, fsmt, funnel, fuyu, gemma, gemma2, gemma3, gemma3_text, git, glm, glm4, glpn, got_ocr2, gpt-sw3, gpt2, gpt_bigcode, gpt_neo, gpt_neox, gpt_neox_japanese, gptj, gptsan-japanese, granite, granite_speech, granitemoe, granitemoehybrid, granitemoeshared, granitevision, graphormer, grounding-dino, groupvit, helium, hgnet_v2, hiera, hubert, ibert, idefics, idefics2, idefics3, idefics3_vision, ijepa, imagegpt, informer, instructblip, instructblipvideo, internvl, internvl_vision, jamba, janus, jetmoe, jukebox, kosmos-2, layoutlm, layoutlmv2, layoutlmv3, led, levit, lilt, llama, llama4, llama4_text, llava, llava_next, llava_next_video, llava_onevision, longformer, longt5, luke, lxmert, m2m_100, mamba, mamba2, marian, markuplm, mask2former, maskformer, maskformer-swin, mbart, mctct, mega, megatron-bert, mgp-str, mimi, mistral, mistral3, mixtral, mlcd, mllama, mobilebert, mobilenet_v1, mobilenet_v2, mobilevit, mobilevitv2, modernbert, moonshine, moshi, mpnet, mpt, mra, mt5, musicgen, musicgen_melody, mvp, nat, nemotron, nezha, nllb-moe, nougat, nystromformer, olmo, olmo2, olmoe, omdet-turbo, oneformer, open-llama, openai-gpt, opt, owlv2, owlvit, paligemma, patchtsmixer, patchtst, pegasus, pegasus_x, perceiver, persimmon, phi, phi3, phi4_multimodal, phimoe, pix2struct, pixtral, plbart, poolformer, pop2piano, prompt_depth_anything, prophetnet, pvt, pvt_v2, qdqbert, qwen2, qwen2_5_omni, qwen2_5_vl, qwen2_5_vl_text, qwen2_audio, qwen2_audio_encoder, qwen2_moe, qwen2_vl, qwen2_vl_text, qwen3, qwen3_moe, rag, realm, recurrent_gemma, reformer, regnet, rembert, resnet, retribert, roberta, roberta-prelayernorm, roc_bert, roformer, rt_detr, rt_detr_resnet, rt_detr_v2, rwkv, sam, sam_hq, sam_hq_vision_model, sam_vision_model, seamless_m4t, seamless_m4t_v2, segformer, seggpt, sew, sew-d, shieldgemma2, siglip, siglip2, siglip_vision_model, smolvlm, smolvlm_vision, speech-encoder-decoder, speech_to_text, speech_to_text_2, speecht5, splinter, squeezebert, stablelm, starcoder2, superglue, superpoint, swiftformer, swin, swin2sr, swinv2, switch_transformers, t5, table-transformer, tapas, textnet, time_series_transformer, timesfm, timesformer, timm_backbone, timm_wrapper, trajectory_transformer, transfo-xl, trocr, tvlt, tvp, udop, umt5, unispeech, unispeech-sat, univnet, upernet, van, video_llava, videomae, vilt, vipllava, vision-encoder-decoder, vision-text-dual-encoder, visual_bert, vit, vit_hybrid, vit_mae, vit_msn, vitdet, vitmatte, vitpose, vitpose_backbone, vits, vivit, wav2vec2, wav2vec2-bert, wav2vec2-conformer, wavlm, whisper, xclip, xglm, xlm, xlm-prophetnet, xlm-roberta, xlm-roberta-xl, xlnet, xmod, yolos, yoso, zamba, zamba2, zoedepth
-2025-07-16 09:56:39,690 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
-2025-07-16 09:56:39,690 - Thread-2 (init_rag_background) - WARNING - Erro ao carregar documentos: 'charmap' codec can't encode character '\U0001f50d' in position 0: character maps to <undefined>
-2025-07-16 09:56:42,412 - Thread-11 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 09:56:42] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
-2025-07-16 09:56:47,749 - Thread-12 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 09:56:47] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
-2025-07-16 09:56:53,080 - Thread-13 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 09:56:53] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
-2025-07-16 09:56:58,406 - Thread-14 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 09:56:58] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
-2025-07-16 09:57:03,773 - Thread-15 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 09:57:03] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
-2025-07-16 09:57:04,339 - Thread-16 (process_request_thread) - INFO -  3 processos extraídos de /Users/anacl/Documents/GMV/Triagem Inicial/Tabela Triagem.md
-2025-07-16 09:57:04,339 - Thread-16 (process_request_thread) - INFO - Extraídos 3 processos da tabela
-2025-07-16 09:57:04,339 - Thread-16 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 09:57:04] "GET /triagem HTTP/1.1" 200 -
-2025-07-16 09:57:09,149 - Thread-19 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 09:57:09] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
-2025-07-16 09:57:14,624 - Thread-20 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 09:57:14] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
-2025-07-16 09:57:20,119 - Thread-21 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 09:57:20] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:19:47,318 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-16 10:19:48,102 - Thread-3 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:19:48] "[33mGET / HTTP/1.1[0m" 404 -
+2025-07-16 10:19:48,844 - Thread-4 (process_request_thread) - ERROR - file:// is not an accepted origin. (further occurrences of this error will be logged with level INFO)
+2025-07-16 10:19:48,844 - Thread-4 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:19:48] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:19:48,892 - Thread-5 (process_request_thread) - INFO -  0 processos extraídos de ./data/triagem.md
+2025-07-16 10:19:48,892 - Thread-5 (process_request_thread) - INFO - Extraídos 0 processos da tabela
+2025-07-16 10:19:48,892 - Thread-5 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:19:48] "GET /triagem HTTP/1.1" 200 -
+2025-07-16 10:19:49,727 - Thread-7 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:19:49] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:19:51,594 - Thread-8 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:19:51] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:19:54,951 - Thread-9 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:19:54] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:19:55,711 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-16 10:20:00,303 - Thread-10 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:20:00] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:20:05,631 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-16 10:20:05,631 - Thread-2 (init_rag_background) - WARNING - No sentence-transformers model found with name models\paraphrase-MiniLM-L3-v2. Creating a new one with mean pooling.
+2025-07-16 10:20:05,631 - Thread-2 (init_rag_background) - ERROR - Erro ao carregar modelo models\paraphrase-MiniLM-L3-v2: Unrecognized model in models\paraphrase-MiniLM-L3-v2. Should have a `model_type` key in its config.json, or contain one of the following strings in its name: albert, align, altclip, aria, aria_text, audio-spectrogram-transformer, autoformer, aya_vision, bamba, bark, bart, beit, bert, bert-generation, big_bird, bigbird_pegasus, biogpt, bit, bitnet, blenderbot, blenderbot-small, blip, blip-2, blip_2_qformer, bloom, bridgetower, bros, camembert, canine, chameleon, chinese_clip, chinese_clip_vision_model, clap, clip, clip_text_model, clip_vision_model, clipseg, clvp, code_llama, codegen, cohere, cohere2, colpali, conditional_detr, convbert, convnext, convnextv2, cpmant, csm, ctrl, cvt, d_fine, dab-detr, dac, data2vec-audio, data2vec-text, data2vec-vision, dbrx, deberta, deberta-v2, decision_transformer, deepseek_v3, deformable_detr, deit, depth_anything, depth_pro, deta, detr, diffllama, dinat, dinov2, dinov2_with_registers, distilbert, donut-swin, dpr, dpt, efficientformer, efficientnet, electra, emu3, encodec, encoder-decoder, ernie, ernie_m, esm, falcon, falcon_mamba, fastspeech2_conformer, flaubert, flava, fnet, focalnet, fsmt, funnel, fuyu, gemma, gemma2, gemma3, gemma3_text, git, glm, glm4, glpn, got_ocr2, gpt-sw3, gpt2, gpt_bigcode, gpt_neo, gpt_neox, gpt_neox_japanese, gptj, gptsan-japanese, granite, granite_speech, granitemoe, granitemoehybrid, granitemoeshared, granitevision, graphormer, grounding-dino, groupvit, helium, hgnet_v2, hiera, hubert, ibert, idefics, idefics2, idefics3, idefics3_vision, ijepa, imagegpt, informer, instructblip, instructblipvideo, internvl, internvl_vision, jamba, janus, jetmoe, jukebox, kosmos-2, layoutlm, layoutlmv2, layoutlmv3, led, levit, lilt, llama, llama4, llama4_text, llava, llava_next, llava_next_video, llava_onevision, longformer, longt5, luke, lxmert, m2m_100, mamba, mamba2, marian, markuplm, mask2former, maskformer, maskformer-swin, mbart, mctct, mega, megatron-bert, mgp-str, mimi, mistral, mistral3, mixtral, mlcd, mllama, mobilebert, mobilenet_v1, mobilenet_v2, mobilevit, mobilevitv2, modernbert, moonshine, moshi, mpnet, mpt, mra, mt5, musicgen, musicgen_melody, mvp, nat, nemotron, nezha, nllb-moe, nougat, nystromformer, olmo, olmo2, olmoe, omdet-turbo, oneformer, open-llama, openai-gpt, opt, owlv2, owlvit, paligemma, patchtsmixer, patchtst, pegasus, pegasus_x, perceiver, persimmon, phi, phi3, phi4_multimodal, phimoe, pix2struct, pixtral, plbart, poolformer, pop2piano, prompt_depth_anything, prophetnet, pvt, pvt_v2, qdqbert, qwen2, qwen2_5_omni, qwen2_5_vl, qwen2_5_vl_text, qwen2_audio, qwen2_audio_encoder, qwen2_moe, qwen2_vl, qwen2_vl_text, qwen3, qwen3_moe, rag, realm, recurrent_gemma, reformer, regnet, rembert, resnet, retribert, roberta, roberta-prelayernorm, roc_bert, roformer, rt_detr, rt_detr_resnet, rt_detr_v2, rwkv, sam, sam_hq, sam_hq_vision_model, sam_vision_model, seamless_m4t, seamless_m4t_v2, segformer, seggpt, sew, sew-d, shieldgemma2, siglip, siglip2, siglip_vision_model, smolvlm, smolvlm_vision, speech-encoder-decoder, speech_to_text, speech_to_text_2, speecht5, splinter, squeezebert, stablelm, starcoder2, superglue, superpoint, swiftformer, swin, swin2sr, swinv2, switch_transformers, t5, table-transformer, tapas, textnet, time_series_transformer, timesfm, timesformer, timm_backbone, timm_wrapper, trajectory_transformer, transfo-xl, trocr, tvlt, tvp, udop, umt5, unispeech, unispeech-sat, univnet, upernet, van, video_llava, videomae, vilt, vipllava, vision-encoder-decoder, vision-text-dual-encoder, visual_bert, vit, vit_hybrid, vit_mae, vit_msn, vitdet, vitmatte, vitpose, vitpose_backbone, vits, vivit, wav2vec2, wav2vec2-bert, wav2vec2-conformer, wavlm, whisper, xclip, xglm, xlm, xlm-prophetnet, xlm-roberta, xlm-roberta-xl, xlnet, xmod, yolos, yoso, zamba, zamba2, zoedepth
+2025-07-16 10:20:05,631 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-16 10:20:05,631 - Thread-2 (init_rag_background) - WARNING - Erro ao carregar documentos: 'charmap' codec can't encode character '\U0001f50d' in position 0: character maps to <undefined>
+2025-07-16 10:20:05,646 - Thread-11 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:20:05] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:20:10,990 - Thread-12 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:20:10] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:20:16,374 - Thread-13 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:20:16] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:20:21,787 - Thread-14 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:20:21] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:20:27,247 - Thread-15 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:20:27] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:20:32,805 - Thread-16 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:20:32] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:22:11,940 - Thread-17 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:22:11] "[33mGET / HTTP/1.1[0m" 404 -
+2025-07-16 10:22:12,837 - Thread-18 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:22:12] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:22:12,891 - Thread-19 (process_request_thread) - INFO -  0 processos extraídos de ./data/triagem.md
+2025-07-16 10:22:12,892 - Thread-19 (process_request_thread) - INFO - Extraídos 0 processos da tabela
+2025-07-16 10:22:12,892 - Thread-19 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:22:12] "GET /triagem HTTP/1.1" 200 -
+2025-07-16 10:22:14,649 - Thread-21 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:22:14] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:22:17,170 - Thread-22 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:22:17] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:22:22,508 - Thread-23 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:22:22] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:22:27,766 - MainThread   - INFO - CORS configurado
+2025-07-16 10:22:27,769 - MainThread   - INFO - Rotas registradas
+2025-07-16 10:22:27,769 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-16 10:22:27,769 - MainThread   - INFO - Background cleanup iniciado
+2025-07-16 10:22:27,774 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-16 10:22:27,775 - MainThread   - INFO - Inicialização RAG em background
+2025-07-16 10:22:27,775 - MainThread   - INFO - Servidor pronto!
+2025-07-16 10:22:27,775 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-16 10:22:27,775 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-16 10:22:27,776 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-16 10:22:27,792 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.102:5000
+2025-07-16 10:22:27,792 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-16 10:22:27,840 - Thread-24 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:22:27] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:22:30,196 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-16 10:22:33,176 - Thread-25 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:22:33] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:22:38,511 - Thread-26 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:22:38] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:22:43,559 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-16 10:22:43,869 - Thread-27 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:22:43] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:22:45,555 - Thread-2 (init_rag_background) - ERROR - Erro ao carregar modelo models\paraphrase-MiniLM-L3-v2: Error no file named pytorch_model.bin, model.safetensors, tf_model.h5, model.ckpt.index or flax_model.msgpack found in directory models\paraphrase-MiniLM-L3-v2.
+2025-07-16 10:22:45,555 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-16 10:22:45,555 - Thread-2 (init_rag_background) - WARNING - Erro ao carregar documentos: 'charmap' codec can't encode character '\U0001f50d' in position 0: character maps to <undefined>
+2025-07-16 10:22:49,239 - Thread-28 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:22:49] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:22:54,685 - Thread-29 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:22:54] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:23:00,292 - Thread-30 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:23:00] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:23:05,912 - Thread-31 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:23:05] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:23:12,004 - Thread-32 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:23:12] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:23:28,401 - Thread-33 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:23:28] "[33mGET / HTTP/1.1[0m" 404 -
+2025-07-16 10:23:29,186 - Thread-34 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:23:29] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:23:29,233 - Thread-35 (process_request_thread) - INFO -  0 processos extraídos de ./data/triagem.md
+2025-07-16 10:23:29,233 - Thread-35 (process_request_thread) - INFO - Extraídos 0 processos da tabela
+2025-07-16 10:23:29,233 - Thread-35 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:23:29] "GET /triagem HTTP/1.1" 200 -
+2025-07-16 10:23:30,271 - Thread-37 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:23:30] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:23:31,944 - Thread-38 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:23:31] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:23:37,271 - Thread-39 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:23:37] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:23:40,460 - MainThread   - INFO - CORS configurado
+2025-07-16 10:23:40,477 - MainThread   - INFO - Rotas registradas
+2025-07-16 10:23:40,477 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-16 10:23:40,477 - MainThread   - INFO - Background cleanup iniciado
+2025-07-16 10:23:40,477 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-16 10:23:40,477 - MainThread   - INFO - Inicialização RAG em background
+2025-07-16 10:23:40,477 - MainThread   - INFO - Servidor pronto!
+2025-07-16 10:23:40,477 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-16 10:23:40,477 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-16 10:23:40,477 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-16 10:23:40,494 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.102:5000
+2025-07-16 10:23:40,494 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-16 10:23:42,607 - Thread-40 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:23:42] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:23:42,806 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-16 10:23:47,944 - Thread-41 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:23:47] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:23:53,287 - Thread-42 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:23:53] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:23:55,628 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-16 10:23:57,178 - Thread-2 (init_rag_background) - INFO - Modelo models\paraphrase-MiniLM-L3-v2 carregado no dispositivo cpu
+2025-07-16 10:23:57,178 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-16 10:23:57,178 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-16 10:23:57,178 - Thread-2 (init_rag_background) - WARNING - Erro ao carregar documentos: 'charmap' codec can't encode character '\U0001f50d' in position 0: character maps to <undefined>
+2025-07-16 10:23:58,645 - Thread-43 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:23:58] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:24:04,038 - Thread-44 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:24:04] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:24:09,495 - Thread-45 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:24:09] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:24:15,034 - Thread-46 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:24:15] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:24:20,979 - Thread-47 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:24:20] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:24:27,465 - Thread-48 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:24:27] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:24:33,440 - Thread-49 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:24:33] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:24:40,976 - Thread-50 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:24:40] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:24:48,327 - Thread-51 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:24:48] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:24:57,302 - Thread-52 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:24:57] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:25:05,823 - Thread-53 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:25:05] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:25:13,937 - Thread-54 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:25:13] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:25:22,644 - Thread-55 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:25:22] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:25:32,611 - Thread-56 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:25:32] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:25:42,796 - Thread-57 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:25:42] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:25:49,976 - Thread-58 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:25:49] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:25:59,088 - Thread-59 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:25:59] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:26:05,996 - Thread-60 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:26:05] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:26:15,550 - Thread-61 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:26:15] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:26:22,365 - Thread-62 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:26:22] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:26:31,894 - Thread-63 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:26:31] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:26:38,313 - Thread-64 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:26:38] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:26:44,936 - Thread-65 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:26:44] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:26:52,868 - Thread-66 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:26:52] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:27:02,294 - Thread-67 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:27:02] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:27:10,574 - Thread-68 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:27:10] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:27:17,731 - Thread-69 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:27:17] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:27:25,002 - Thread-70 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:27:25] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:27:30,333 - Thread-71 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:27:30] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:27:35,665 - Thread-72 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:27:35] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:27:40,990 - Thread-73 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:27:40] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:27:46,322 - Thread-74 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:27:46] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:27:51,654 - Thread-75 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:27:51] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:27:57,000 - Thread-76 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:27:57] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:28:02,323 - Thread-77 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:28:02] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:28:07,670 - Thread-78 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:28:07] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:28:13,009 - Thread-79 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:28:13] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:28:18,377 - Thread-80 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:28:18] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:28:23,739 - Thread-81 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:28:23] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:28:29,118 - Thread-82 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:28:29] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:28:34,627 - Thread-83 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:28:34] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:28:40,291 - Thread-84 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:28:40] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:28:46,015 - Thread-85 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:28:46] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:28:52,384 - Thread-86 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:28:52] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:29:02,122 - Thread-87 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:29:02] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:29:09,637 - Thread-88 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:29:09] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:29:16,368 - Thread-89 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:29:16] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:29:23,228 - Thread-90 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:29:23] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:29:33,088 - Thread-91 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:29:33] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:29:42,477 - Thread-92 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:29:42] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:29:51,484 - Thread-93 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:29:51] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:30:00,282 - Thread-94 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:30:00] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:30:08,281 - Thread-95 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:30:08] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:30:16,044 - Thread-96 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:30:16] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:30:23,605 - Thread-97 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:30:23] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:30:31,425 - Thread-98 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:30:31] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:30:38,800 - Thread-99 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:30:38] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:32:10,198 - Thread-100 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:32:10] "[33mGET / HTTP/1.1[0m" 404 -
+2025-07-16 10:32:14,016 - Thread-102 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:32:14] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:32:14,030 - Thread-101 (process_request_thread) - INFO -  0 processos extraídos de ./data/triagem.md
+2025-07-16 10:32:14,030 - Thread-101 (process_request_thread) - INFO - Extraídos 0 processos da tabela
+2025-07-16 10:32:14,031 - Thread-101 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:32:14] "GET /triagem HTTP/1.1" 200 -
+2025-07-16 10:32:30,348 - Thread-104 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:32:30] "[33mGET / HTTP/1.1[0m" 404 -
+2025-07-16 10:32:46,501 - Thread-105 (process_request_thread) - INFO -  0 processos extraídos de ./data/triagem.md
+2025-07-16 10:32:46,501 - Thread-105 (process_request_thread) - INFO - Extraídos 0 processos da tabela
+2025-07-16 10:32:46,501 - Thread-105 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:32:46] "GET /triagem HTTP/1.1" 200 -
+2025-07-16 10:32:46,501 - Thread-106 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:32:46] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:33:13,469 - Thread-108 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:33:13] "[33mGET / HTTP/1.1[0m" 404 -
+2025-07-16 10:33:14,307 - Thread-109 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:33:14] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:33:14,370 - Thread-110 (process_request_thread) - INFO -  0 processos extraídos de ./data/triagem.md
+2025-07-16 10:33:14,370 - Thread-110 (process_request_thread) - INFO - Extraídos 0 processos da tabela
+2025-07-16 10:33:14,370 - Thread-110 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:33:14] "GET /triagem HTTP/1.1" 200 -
+2025-07-16 10:33:15,512 - Thread-112 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:33:15] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:33:18,034 - Thread-113 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:33:18] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:33:22,670 - MainThread   - INFO - CORS configurado
+2025-07-16 10:33:22,684 - MainThread   - INFO - Rotas registradas
+2025-07-16 10:33:22,684 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-16 10:33:22,684 - MainThread   - INFO - Background cleanup iniciado
+2025-07-16 10:33:22,684 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-16 10:33:22,684 - MainThread   - INFO - Inicialização RAG em background
+2025-07-16 10:33:22,684 - MainThread   - INFO - Servidor pronto!
+2025-07-16 10:33:22,684 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-16 10:33:22,684 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-16 10:33:22,684 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-16 10:33:22,702 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.102:5000
+2025-07-16 10:33:22,702 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-16 10:33:23,366 - Thread-114 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:33:23] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:33:28,787 - Thread-115 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:33:28] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:33:32,546 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-16 10:33:34,135 - Thread-116 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:33:34] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:33:39,485 - Thread-117 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:33:39] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:33:43,672 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-16 10:33:44,846 - Thread-118 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:33:44] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:33:47,804 - Thread-2 (init_rag_background) - INFO - Modelo models\paraphrase-MiniLM-L3-v2 carregado no dispositivo cpu
+2025-07-16 10:33:47,804 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-16 10:33:47,804 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-16 10:33:47,804 - Thread-2 (init_rag_background) - WARNING - Erro ao carregar documentos: 'charmap' codec can't encode character '\U0001f50d' in position 0: character maps to <undefined>
+2025-07-16 10:33:50,217 - Thread-119 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:33:50] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:33:55,612 - Thread-120 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:33:55] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:34:07,952 - Thread-121 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:34:07] "[33mGET / HTTP/1.1[0m" 404 -
+2025-07-16 10:34:08,813 - Thread-122 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:34:08] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:34:08,885 - Thread-123 (process_request_thread) - INFO -  0 processos extraídos de ./data/triagem.md
+2025-07-16 10:34:08,885 - Thread-123 (process_request_thread) - INFO - Extraídos 0 processos da tabela
+2025-07-16 10:34:08,886 - Thread-123 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:34:08] "GET /triagem HTTP/1.1" 200 -
+2025-07-16 10:34:10,318 - Thread-125 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:34:10] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:34:13,214 - Thread-126 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:34:13] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:34:16,251 - Thread-127 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:34:16] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:34:21,577 - Thread-128 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:34:21] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:34:22,131 - MainThread   - INFO - CORS configurado
+2025-07-16 10:34:22,145 - MainThread   - INFO - Rotas registradas
+2025-07-16 10:34:22,145 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-16 10:34:22,161 - MainThread   - INFO - Background cleanup iniciado
+2025-07-16 10:34:22,161 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-16 10:34:22,161 - MainThread   - INFO - Inicialização RAG em background
+2025-07-16 10:34:22,161 - MainThread   - INFO - Servidor pronto!
+2025-07-16 10:34:22,161 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-16 10:34:22,161 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-16 10:34:22,161 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-16 10:34:22,194 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.102:5000
+2025-07-16 10:34:22,194 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-16 10:34:24,611 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-16 10:34:26,918 - Thread-129 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:34:26] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:34:32,249 - Thread-130 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:34:32] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:34:37,596 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-16 10:34:37,604 - Thread-131 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:34:37] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:34:40,626 - Thread-2 (init_rag_background) - INFO - Modelo models\paraphrase-MiniLM-L3-v2 carregado no dispositivo cpu
+2025-07-16 10:34:40,626 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-16 10:34:40,626 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-16 10:34:40,626 - Thread-2 (init_rag_background) - WARNING - Erro ao carregar documentos: 'charmap' codec can't encode character '\U0001f50d' in position 0: character maps to <undefined>
+2025-07-16 10:34:43,022 - Thread-132 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:34:43] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:34:48,432 - Thread-133 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:34:48] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:34:53,844 - Thread-134 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:34:53] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:35:28,763 - Thread-135 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:35:28] "[33mGET / HTTP/1.1[0m" 404 -
+2025-07-16 10:35:29,628 - Thread-136 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:35:29] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:35:29,691 - Thread-137 (process_request_thread) - INFO -  0 processos extraídos de ./data/triagem.md
+2025-07-16 10:35:29,691 - Thread-137 (process_request_thread) - INFO - Extraídos 0 processos da tabela
+2025-07-16 10:35:29,691 - Thread-137 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:35:29] "GET /triagem HTTP/1.1" 200 -
+2025-07-16 10:35:31,338 - Thread-139 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:35:31] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:35:33,384 - Thread-140 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:35:33] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:35:38,175 - MainThread   - INFO - CORS configurado
+2025-07-16 10:35:38,175 - MainThread   - INFO - Rotas registradas
+2025-07-16 10:35:38,175 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-16 10:35:38,175 - MainThread   - INFO - Background cleanup iniciado
+2025-07-16 10:35:38,175 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-16 10:35:38,175 - MainThread   - INFO - Inicialização RAG em background
+2025-07-16 10:35:38,184 - MainThread   - INFO - Servidor pronto!
+2025-07-16 10:35:38,184 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-16 10:35:38,184 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-16 10:35:38,184 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-16 10:35:38,200 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.102:5000
+2025-07-16 10:35:38,200 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-16 10:35:38,722 - Thread-141 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:35:38] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:35:40,581 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-16 10:35:44,049 - Thread-142 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:35:44] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:35:49,382 - Thread-143 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:35:49] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:35:54,865 - Thread-144 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:35:54] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:35:55,194 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-16 10:35:57,088 - Thread-2 (init_rag_background) - INFO - Modelo models\paraphrase-MiniLM-L3-v2 carregado no dispositivo cpu
+2025-07-16 10:35:57,088 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-16 10:35:57,177 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-16 10:35:57,177 - Thread-2 (init_rag_background) - WARNING - Erro ao carregar documentos: 'charmap' codec can't encode character '\U0001f50d' in position 0: character maps to <undefined>
+2025-07-16 10:36:00,223 - Thread-145 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:36:00] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:36:05,620 - Thread-146 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:36:05] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:36:11,080 - Thread-147 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:36:11] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:36:16,643 - Thread-148 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:36:16] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:36:22,540 - Thread-149 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:36:22] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:36:28,797 - Thread-150 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:36:28] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:36:36,321 - Thread-151 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:36:36] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:36:46,307 - Thread-152 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:36:46] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:36:53,224 - Thread-153 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:36:53] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:37:00,235 - Thread-154 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:37:00] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:37:07,848 - Thread-155 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:37:07] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:37:14,826 - Thread-156 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:37:14] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:37:22,292 - Thread-157 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:37:22] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:37:32,288 - Thread-158 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:37:32] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:37:41,294 - Thread-159 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:37:41] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:37:48,835 - Thread-160 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:37:48] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:37:59,041 - Thread-161 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:37:59] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:38:07,760 - Thread-162 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:38:07] "[33mGET / HTTP/1.1[0m" 404 -
+2025-07-16 10:38:08,639 - Thread-163 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:38:08] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:38:08,685 - Thread-164 (process_request_thread) - INFO -  0 processos extraídos de ./data/triagem.md
+2025-07-16 10:38:08,685 - Thread-164 (process_request_thread) - INFO - Extraídos 0 processos da tabela
+2025-07-16 10:38:08,685 - Thread-164 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:38:08] "GET /triagem HTTP/1.1" 200 -
+2025-07-16 10:38:09,761 - Thread-166 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:38:09] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:38:11,995 - Thread-167 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:38:11] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:38:16,692 - Thread-168 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:38:16] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:38:16,961 - MainThread   - INFO - CORS configurado
+2025-07-16 10:38:16,961 - MainThread   - INFO - Rotas registradas
+2025-07-16 10:38:16,961 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-16 10:38:16,961 - MainThread   - INFO - Background cleanup iniciado
+2025-07-16 10:38:16,961 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-16 10:38:16,961 - MainThread   - INFO - Inicialização RAG em background
+2025-07-16 10:38:16,961 - MainThread   - INFO - Servidor pronto!
+2025-07-16 10:38:16,961 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-16 10:38:16,961 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-16 10:38:16,961 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-16 10:38:16,992 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.102:5000
+2025-07-16 10:38:16,992 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-16 10:38:19,369 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-16 10:38:22,028 - Thread-169 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:38:22] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:38:27,361 - Thread-170 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:38:27] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:38:32,704 - Thread-171 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:38:32] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:38:32,912 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-16 10:38:34,078 - Thread-2 (init_rag_background) - INFO - Modelo models\paraphrase-MiniLM-L3-v2 carregado no dispositivo cpu
+2025-07-16 10:38:34,078 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-16 10:38:34,158 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-16 10:38:34,158 - Thread-2 (init_rag_background) - WARNING - Erro ao carregar documentos: 'charmap' codec can't encode character '\u274c' in position 0: character maps to <undefined>
+2025-07-16 10:38:38,054 - Thread-172 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:38:38] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:38:43,451 - Thread-173 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:38:43] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:38:48,896 - Thread-174 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:38:48] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:38:54,364 - Thread-175 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:38:54] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:39:00,305 - Thread-176 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:39:00] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:39:06,758 - Thread-177 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:39:06] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:39:13,029 - Thread-178 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:39:13] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:39:21,006 - Thread-179 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:39:21] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:39:27,697 - Thread-180 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:39:27] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:39:34,671 - Thread-181 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:39:34] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:39:44,014 - Thread-182 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:39:44] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:39:51,793 - Thread-183 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:39:51] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:40:01,590 - Thread-184 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:40:01] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:40:10,634 - Thread-185 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:40:10] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:40:18,950 - Thread-186 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:40:18] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:40:26,790 - Thread-187 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:40:26] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:40:33,649 - Thread-188 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:40:33] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:40:40,734 - Thread-189 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:40:40] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:40:50,677 - Thread-190 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:40:50] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:41:00,197 - Thread-191 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:41:00] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:41:12,500 - Thread-192 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:41:12] "[33mGET / HTTP/1.1[0m" 404 -
+2025-07-16 10:41:13,379 - Thread-193 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:41:13] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:41:13,427 - Thread-194 (process_request_thread) - WARNING - Arquivo de triagem não existe: ./data/triagem.md
+2025-07-16 10:41:13,427 - Thread-194 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:41:13] "GET /triagem HTTP/1.1" 200 -
+2025-07-16 10:41:14,676 - Thread-196 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:41:14] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:41:17,985 - Thread-197 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:41:17] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:41:22,145 - Thread-198 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:41:22] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:41:24,202 - MainThread   - INFO - CORS configurado
+2025-07-16 10:41:24,202 - MainThread   - INFO - Rotas registradas
+2025-07-16 10:41:24,202 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-16 10:41:24,211 - MainThread   - INFO - Background cleanup iniciado
+2025-07-16 10:41:24,211 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-16 10:41:24,211 - MainThread   - INFO - Inicialização RAG em background
+2025-07-16 10:41:24,211 - MainThread   - INFO - Servidor pronto!
+2025-07-16 10:41:24,211 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-16 10:41:24,211 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-16 10:41:24,211 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-16 10:41:24,228 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.0.82.102:5000
+2025-07-16 10:41:24,228 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-16 10:41:26,632 - Thread-2 (init_rag_background) - INFO - HTTP Request: POST http://localhost:11434/api/generate "HTTP/1.1 200 OK"
+2025-07-16 10:41:27,486 - Thread-199 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:41:27] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:41:32,830 - Thread-200 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:41:32] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:41:38,164 - Thread-201 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:41:38] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:41:40,296 - Thread-2 (init_rag_background) - INFO - Load pretrained SentenceTransformer: models\paraphrase-MiniLM-L3-v2
+2025-07-16 10:41:42,012 - Thread-2 (init_rag_background) - INFO - Modelo models\paraphrase-MiniLM-L3-v2 carregado no dispositivo cpu
+2025-07-16 10:41:42,012 - Thread-2 (init_rag_background) - INFO - Dimensões Matryoshka: [32, 64, 128]
+2025-07-16 10:41:42,085 - Thread-2 (init_rag_background) - INFO - RAG inicializado com sucesso
+2025-07-16 10:41:42,102 - Thread-2 (init_rag_background) - INFO - 0 documentos carregados
+2025-07-16 10:41:43,519 - Thread-202 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:41:43] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:41:48,882 - Thread-203 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:41:48] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:41:54,330 - Thread-204 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:41:54] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -
+2025-07-16 10:41:59,782 - Thread-205 (process_request_thread) - INFO - 127.0.0.1 - - [16/Jul/2025 10:41:59] "[31m[1mGET /socket.io/?EIO=4&transport=websocket HTTP/1.1[0m" 400 -

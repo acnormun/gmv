@@ -18,10 +18,10 @@ def safe_import(module_name, class_name):
         module = __import__(f'utils.{module_name}', fromlist=[class_name])
         return getattr(module, class_name)
     except ImportError as e:
-        print(f"{class_name} não disponível: {e}")
+        print(f"⚠️ {class_name} não disponível: {e}")
         return None
     except Exception as e:
-        print(f"Erro ao importar {class_name}: {e}")
+        print(f"❌ Erro ao importar {class_name}: {e}")
         return None
 
 ConversationalLayer = safe_import('conversational_layer', 'ConversationalLayer')
@@ -50,6 +50,6 @@ try:
         __all__.append('UltraFastRAGConfig')
         
 except Exception as e:
-    print(f"UltraFastRAG componentes não disponíveis: {e}")
+    print(f"⚠️ UltraFastRAG componentes não disponíveis: {e}")
 
-print(f"Utils carregado com {len(__all__)} componentes: {__all__}")
+print(f"📦 Utils carregado com {len(__all__)} componentes: {__all__}")

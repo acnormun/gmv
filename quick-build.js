@@ -42,7 +42,7 @@ console.log('Isso pode demorar alguns minutos...\n');
 // Executa o build
 const buildProcess = exec('npm run build', (error, stdout, stderr) => {
     if (error) {
-        console.error('❌ ERRO NO BUILD:');
+        console.error(' ERRO NO BUILD:');
         console.error(error.message);
         
         console.log('\n🔧 POSSÍVEIS SOLUÇÕES:');
@@ -91,7 +91,7 @@ const buildProcess = exec('npm run build', (error, stdout, stderr) => {
         console.log('3. O app será instalado e criará o atalho automaticamente');
         
     } else {
-        console.log('\n❌ Pasta dist/ não foi criada');
+        console.log('\n Pasta dist/ não foi criada');
         console.log('Verifique os erros acima');
     }
 });

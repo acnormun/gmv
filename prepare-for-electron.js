@@ -8,7 +8,7 @@ const vueProjectPath = __dirname;
 const electronProjectPath = path.dirname(__dirname);
 
 function log(message, status = 'info') {
-    const icons = { success: '✅', error: '❌', warning: '⚠️', info: 'ℹ️' };
+    const icons = { success: '✅', error: '', warning: '⚠️', info: 'ℹ️' };
     console.log(`${icons[status]} ${message}`);
 }
 

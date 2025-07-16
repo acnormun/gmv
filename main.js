@@ -313,9 +313,13 @@ app.whenReady().then(async () => {
         log('Electron pronto, iniciando aplicação...');
         createLoadingWindow();
         log('Iniciando backend...');
-        backendProcess = startBackend();
+        backendProcess = await startBackend();
         log('Aguardando backend...');
         await waitForBackend(BACKEND_URL);
+        log('Backend pronto, carregando janela principal...')
+        // if(loadingWindow){
+        //     loadingWindow.close()
+        // }
         log('Criando janela...');
         await createWindow();
         log('=== GMV Sistema iniciado com sucesso ===');
