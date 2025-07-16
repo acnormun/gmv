@@ -159,8 +159,8 @@
         <!-- Status -->
         <div>
           <label class="block text-sm text-neutral-600 mb-1">Status</label>
-          <select 
-            v-model="filtros.status" 
+          <select
+            v-model="filtros.status"
             @change="aplicarFiltrosAutomaticamente"
             class="w-full border rounded-md px-3 py-2"
           >
@@ -171,6 +171,22 @@
             <option>Concluído</option>
           </select>
         </div>
+
+        <!-- Prioridade -->
+        <div>
+          <label class="block text-sm text-neutral-600 mb-1">Prioridade</label>
+          <select
+            v-model="filtros.prioridade"
+            @change="aplicarFiltrosAutomaticamente"
+            class="w-full border rounded-md px-3 py-2"
+          >
+            <option value="">Todas</option>
+            <option value="BAIXA">Baixa</option>
+            <option value="MÉDIA">Média</option>
+            <option value="ALTA">Alta</option>
+          </select>
+        </div>
+
 
         <!-- Última Atualização -->
         <div>
@@ -305,6 +321,7 @@ const filtros = reactive({
   ultimaAtualizacao: '',
   suspeitos: false,
   tipoAtraso: '',
+  prioridade: ''
 })
 
 function aplicarFiltrosAutomaticamente() {
@@ -336,6 +353,7 @@ function limparTodosFiltros() {
   filtros.ultimaAtualizacao = ''
   filtros.suspeitos = false
   filtros.tipoAtraso = ''
+  filtros.prioridade = ''
   
   emit('clearFilters')
 }

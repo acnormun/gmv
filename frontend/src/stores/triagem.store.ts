@@ -6,6 +6,7 @@ import { getProcessos, type Processo } from '@/api/triagem'
 export const useTriagemStore = defineStore('triagem', () => {
   const processos = ref<Processo[]>([])
   const processoSelecionado = ref<Processo | null>(null)
+  const processosFiltrados = ref<Processo[]>([])
 
   async function carregarProcessos() {
     const data = await getProcessos().then((res) => res.map((item) => ({
@@ -14,11 +15,12 @@ export const useTriagemStore = defineStore('triagem', () => {
       suspeitos: item.suspeitos === 'nan' ? null : item.suspeitos
     })));
     processos.value = data
+    processosFiltrados.value = [...data]
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   function filtrar(filtros: Record<string, any>) {
-    return processos.value.filter((proc) => {
+    processosFiltrados.value = processos.value.filter((proc) => {
       return (
         (!filtros.numeroProcesso || proc.numeroProcesso.includes(filtros.numeroProcesso)) &&
         (!filtros.tema?.length || filtros.tema.includes(proc.tema)) &&
@@ -26,9 +28,12 @@ export const useTriagemStore = defineStore('triagem', () => {
         (!filtros.responsavel ||
           proc.responsavel.toLowerCase().includes(filtros.responsavel.toLowerCase())) &&
         (!filtros.status || proc.status === filtros.status) &&
+        (!filtros.prioridade || proc.prioridade === filtros.prioridade) &&
         (!filtros.ultimaAtualizacao || proc.ultimaAtualizacao === filtros.ultimaAtualizacao)
       )
     })
+
+    return processosFiltrados.value
   }
 
   function selecionarProcesso(processo: Processo) {
@@ -42,6 +47,7 @@ export const useTriagemStore = defineStore('triagem', () => {
   return {
     processos,
     processoSelecionado,
+    processosFiltrados,
     carregarProcessos,
     filtrar,
     selecionarProcesso,

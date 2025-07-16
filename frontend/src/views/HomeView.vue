@@ -1,11 +1,7 @@
 <template>
   <main>
     <div class="container mx-auto py-6">
-      <AddTriagem
-        :open="showModal"
-        mode="new"
-        @close="showModal = false"
-      />
+      <AddTriagem :open="showModal" mode="new" @close="showModal = false" />
 
       <div class="grid grid-cols-12 gap-6">
         <div class="col-span-3">
@@ -13,15 +9,9 @@
         </div>
 
         <div class="col-span-9 space-y-6">
-          <Dashboard
-            :emAndamento="emAndamento"
-            :abertos="abertos"
-            :revisao="revisao"
-            :concluidos="concluidos"
-            :emAtraso="emAtraso"
-            :temasMaisAtuados="temasMaisAtuados"
-          />
-          <MainTable :data="dadosFiltrados" @refresh="atualizarProcessos" />
+          <Dashboard :emAndamento="emAndamento" :abertos="abertos" :revisao="revisao" :concluidos="concluidos"
+            :emAtraso="emAtraso" :temasMaisAtuados="temasMaisAtuados" />
+          <MainTable @refresh="atualizarProcessos" />
         </div>
       </div>
     </div>
@@ -39,7 +29,6 @@ import AddTriagem from '@/components/AddTriagem.vue'
 import Dashboard from '@/components/Dashboard.vue'
 
 const store = useTriagemStore()
-const dadosFiltrados = ref<Processo[]>([])
 const showModal = ref(false)
 const emAndamento = ref(0)
 const abertos = ref(0)
@@ -92,11 +81,12 @@ interface Filtros {
   ultimaAtualizacao?: string;
   suspeitos?: boolean;
   tipoAtraso?: string;
+  prioridade?: string;
 }
 
 async function atualizarProcessos() {
   await store.carregarProcessos()
-  dadosFiltrados.value = [...store.processos]
+  store.processosFiltrados = [...store.processos]
 
   emAndamento.value = store.processos.filter((p) => p.status === 'Em andamento').length
   abertos.value = store.processos.filter((p) => p.status === 'Aberto').length
@@ -106,9 +96,7 @@ async function atualizarProcessos() {
 }
 
 function filtrarProcessos(filtros: Filtros) {
-  console.log('🔍 Aplicando filtros:', filtros)
-
-  dadosFiltrados.value = store.processos.filter((proc) => {
+  store.processosFiltrados = store.processos.filter((proc) => {
     const filtroNumero = !filtros.numeroProcesso ||
       proc.numeroProcesso.toLowerCase().includes(filtros.numeroProcesso.toLowerCase())
 
@@ -124,6 +112,9 @@ function filtrarProcessos(filtros: Filtros) {
     const filtroStatus = !filtros.status ||
       proc.status === filtros.status
 
+    const filtroPrioridade = !filtros.prioridade ||
+      proc.prioridade === filtros.prioridade
+
     const filtroUltimaAtualizacao = !filtros.ultimaAtualizacao ||
       proc.ultimaAtualizacao === filtros.ultimaAtualizacao
 
@@ -133,18 +124,17 @@ function filtrarProcessos(filtros: Filtros) {
     const filtroTipoAtraso = !filtros.tipoAtraso || verificarTipoAtraso(proc, filtros.tipoAtraso)
 
     const resultado = filtroNumero &&
-                     filtroTema &&
-                     filtroDataDistribuicao &&
-                     filtroResponsavel &&
-                     filtroStatus &&
-                     filtroUltimaAtualizacao &&
-                     filtroSuspeitos &&
-                     filtroTipoAtraso
+      filtroTema &&
+      filtroDataDistribuicao &&
+      filtroResponsavel &&
+      filtroStatus &&
+      filtroPrioridade &&
+      filtroUltimaAtualizacao &&
+      filtroSuspeitos &&
+      filtroTipoAtraso
 
     return resultado
   })
-
-  console.log('📊 Processos filtrados:', dadosFiltrados.value.length)
 }
 
 function verificarProcessoEmAtraso(processo: Processo): boolean {
@@ -209,8 +199,7 @@ function verificarTipoAtraso(processo: Processo, tipoAtraso: string): boolean {
 }
 
 function limparFiltros() {
-  console.log('🧹 Limpando filtros')
-  dadosFiltrados.value = [...store.processos]
+  store.processosFiltrados = [...store.processos]
 }
 
 onMounted(() => {

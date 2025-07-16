@@ -314,11 +314,7 @@ async function submit() {
       dat,
     }
 
-    console.log('📋 Payload enviado:', payload)
-
     if (props.mode === 'new') {
-      console.log('🚀 Iniciando adição de processo...')
-
       const response = await addProcesso(payload)
 
       const result = await response.json()

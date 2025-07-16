@@ -107,10 +107,10 @@ const itensPorPagina = 5
 const emit = defineEmits(['refresh'])
 
 const props = defineProps<{
-  data: Processo[]
+  data?: Processo[]
 }>()
 
-const lista = computed(() => store.processos)
+const lista = computed(() => props.data ?? store.processosFiltrados)
 
 const totalPaginas = computed(() =>
   Math.ceil(lista.value.length / itensPorPagina)

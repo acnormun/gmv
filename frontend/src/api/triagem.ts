@@ -26,8 +26,6 @@ export async function getProcessos(): Promise<Processo[]> {
 }
 
 export async function addProcesso(processo: ProcessoForm): Promise<any> {
-  console.log('📤 Enviando novo processo:', processo)
-
   const res = await fetch(`${API_BASE}/triagem/form`, {
     method: 'POST',
     headers: {
@@ -48,8 +46,6 @@ export async function updateProcesso(
   numeroAntigo: string,
   processoAtualizado: ProcessoForm,
 ): Promise<void> {
-  console.log('📤 Enviando atualização:', processoAtualizado)
-
   const res = await fetch(`${API_BASE}/triagem/${numeroAntigo}`, {
     method: 'PUT',
     headers: {
@@ -64,7 +60,6 @@ export async function updateProcesso(
     throw new Error(error.message || 'Erro ao atualizar processo')
   }
 
-  console.log('✅ Processo atualizado com sucesso')
 }
 
 export async function deleteProcesso(numero: string): Promise<void> {

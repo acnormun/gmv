@@ -2,6 +2,7 @@ const { app, BrowserWindow, dialog, Menu } = require('electron');
 const path = require('path');
 const { spawn } = require('child_process');
 const http = require('http');
+const net = require('net')
 const fs = require('fs');
 const os = require('os');
 const treeKill = require('tree-kill');
@@ -152,16 +153,37 @@ async function startBackend() {
     return proc;
 }
 
-async function waitForBackend(url, maxAttempts = 30) {
+async function waitForBackend(
+    url,
+    { maxAttempts = 60, initialDelay = 5000 } = {}
+) {
+    if (initialDelay > 0) {
+        await new Promise(resolve => setTimeout(resolve, initialDelay));
+    }
     for (let i = 0; i < maxAttempts; i++) {
         try {
             await new Promise((resolve, reject) => {
-                const req = http.get(url, (res) => {
-                    resolve(res);
+                const { hostname, port } = new URL(url);
+                const socket = net.connect(port, hostname);
+                socket.once('connect', () => {
+                    socket.destroy();
+                    const req = http.get(`${url}/health`, (res) => {
+                        res.resume();
+                        if (res.statusCode === 200) {
+                            resolve();
+                        } else {
+                            reject(new Error(`Status ${res.statusCode}`));
+                        }
+                    });
+                    req.on('error', reject);
+                    req.setTimeout(2000, () => {
+                        req.destroy();
+                        reject(new Error('Timeout'));
+                    });
                 });
-                req.on('error', reject);
-                req.setTimeout(2000, () => {
-                    req.destroy();
+                socket.once('error', reject);
+                socket.setTimeout(2000, () => {
+                    socket.destroy();
                     reject(new Error('Timeout'));
                 });
             });
@@ -255,6 +277,16 @@ async function createWindow() {
     if (!isDev) {
         Menu.setApplicationMenu(null);
     }
+    mainWindow.once('ready-to-show', () => {
+        mainWindow.show();
+        if (loadingWindow) {
+            loadingWindow.close();
+        }
+        if (isDev) {
+            mainWindow.webContents.openDevTools();
+        }
+        log('Janela exibida');
+    });
     try {
         if (loadUrl.startsWith('file://')) {
             await mainWindow.loadFile(loadUrl.replace('file://', ''));
@@ -266,16 +298,6 @@ async function createWindow() {
         log(`Erro ao carregar frontend: ${error.message}`);
         throw error;
     }
-    mainWindow.once('ready-to-show', () => {
-        mainWindow.show();
-        if (loadingWindow) {
-            loadingWindow.close();
-        }
-        if (isDev) {
-            mainWindow.webContents.openDevTools();
-        }
-        log('Janela exibida');
-    });
     mainWindow.webContents.on('before-input-event', (event, input) => {
         if (input.key === 'F12' || 
             (input.control && input.shift && input.key === 'I')) {
@@ -317,6 +339,7 @@ app.whenReady().then(async () => {
         log('Iniciando backend...');
         backendProcess = await startBackend();
         log('Aguardando backend...');
+        await new Promise(resolve => setTimeout(resolve,15000 ));
         await waitForBackend(BACKEND_URL);
         log('Criando janela...');
         await createWindow();
@@ -332,6 +355,7 @@ app.whenReady().then(async () => {
 
 app.on('window-all-closed', async () => {
     log('Todas as janelas foram fechadas');
+    isQuitting = true
     await cleanupProcesses();
     if (process.platform !== 'darwin') {
         app.quit();
