@@ -34712,3 +34712,22 @@ AssertionError: write() before start_response
 2025-07-15 17:01:25,451 - MainThread   - INFO - Pool de threads criado com 15 workers
 2025-07-15 17:01:25,451 - MainThread   - INFO - Aguardando threads finalizarem...
 2025-07-15 17:01:25,451 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'
+2025-07-15 18:55:19,525 - MainThread   - INFO - CORS configurado
+2025-07-15 18:55:19,529 - MainThread   - INFO - Rotas registradas
+2025-07-15 18:55:19,530 - MainThread   - INFO - Iniciando servidor com processamento paralelo...
+2025-07-15 18:55:19,531 - MainThread   - INFO - Background cleanup iniciado
+2025-07-15 18:55:19,532 - Thread-2 (init_rag_background) - INFO - Tentando inicializar RAG...
+2025-07-15 18:55:19,532 - MainThread   - INFO - Inicialização RAG em background
+2025-07-15 18:55:19,533 - MainThread   - INFO - Servidor pronto!
+2025-07-15 18:55:19,533 - MainThread   - INFO - Processamento paralelo: HABILITADO
+2025-07-15 18:55:19,533 - MainThread   - INFO - WebSocket: Modo threading otimizado
+2025-07-15 18:55:19,534 - MainThread   - INFO - Monitoramento: /api/system/health
+2025-07-15 18:55:19,547 - MainThread   - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.0.82:5000
+2025-07-15 18:55:19,548 - MainThread   - INFO - [33mPress CTRL+C to quit[0m
+2025-07-15 18:55:25,639 - MainThread   - INFO - Sinal 2 recebido, encerrando...
+2025-07-15 18:55:25,647 - MainThread   - INFO - Pool de threads criado com 15 workers
+2025-07-15 18:55:25,653 - MainThread   - INFO - Aguardando threads finalizarem...
+2025-07-15 18:55:25,673 - MainThread   - WARNING - Aviso no shutdown: ThreadPoolExecutor.shutdown() got an unexpected keyword argument 'timeout'

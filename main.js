@@ -119,7 +119,7 @@ async function startBackend() {
     const pythonCmd = await findPython();
     const appPy = path.join(backendPath, 'app.py');
     log(`Iniciando backend: ${pythonCmd} ${appPy}`);
-    const process = spawn(pythonCmd, [appPy], {
+    const proc = spawn(pythonCmd, [appPy], {
         cwd: backendPath,
         stdio: ['ignore', 'pipe', 'pipe'],
         shell: true,
@@ -129,25 +129,25 @@ async function startBackend() {
             PORT: BACKEND_PORT.toString()
         }
     });
-    process.stdout.on('data', (data) => {
+    proc.stdout.on('data', (data) => {
         const output = data.toString().trim();
         if (output) {
             log(`[BACKEND] ${output}`);
         }
     });
-    process.stderr.on('data', (data) => {
+    proc.stderr.on('data', (data) => {
         const output = data.toString().trim();
         if (output && !output.includes('WARNING')) {
             log(`[BACKEND ERROR] ${output}`);
         }
     });
-    process.on('close', (code) => {
+    proc.on('close', (code) => {
         log(`Backend encerrado com código: ${code}`);
         if (!isQuitting && code !== 0) {
             dialog.showErrorBox('Erro', 'O servidor backend parou inesperadamente');
         }
     });
-    return process;
+    return proc;
 }
 
 async function waitForBackend(url, maxAttempts = 30) {
@@ -308,12 +308,12 @@ async function cleanupProcesses() {
     }
 }
 
-app.whenReady(async () => {
+app.whenReady().then(async () => {
     try {
         log('Electron pronto, iniciando aplicação...');
         createLoadingWindow();
         log('Iniciando backend...');
-        backendProcess = await startBackend();
+        backendProcess = startBackend();
         log('Aguardando backend...');
         await waitForBackend(BACKEND_URL);
         log('Criando janela...');
