@@ -154,31 +154,31 @@ const getStepFromPercentage = (percentage: number) => {
 
 const getMessageFromStep = (step: number) => {
   const messages: Record<number, string> = {
-    1: 'Iniciando processamento...',
-    2: 'Validando dados do processo...',
-    3: 'Analisando suspeição...',
-    4: 'Preparando arquivos...',
-    5: 'Processando anonimização...',
-    6: 'Salvando arquivos...',
-    7: 'Atualizando tabela de triagem...',
-    8: 'Tabela atualizada com sucesso!',
-    9: 'Iniciando notificação por email...',
-    10: 'Processo concluído com sucesso!'
+    1: 'Conectando...',
+    2: 'Validando dados...',
+    3: 'Processando PDF do PJe...',
+    4: 'Analisando suspeição...',
+    5: 'Preparando arquivos...',
+    6: 'Salvando markdown...',
+    7: 'Atualizando busca...',
+    8: 'Executando anonimização...',
+    9: 'Atualizando tabela...',
+    10: 'Processo concluído!'
   }
   return messages[step] || `Processando... (${step})`
 }
 
 const stepsToShow = computed(() => {
   const backendSteps = [
-    'Iniciando processamento',
-    'Validando dados do processo',
+    'Conectando',
+    'Validando dados',
+    'Processando PDF do PJe',
     'Analisando suspeição',
     'Preparando arquivos',
-    'Processando anonimização',
-    'Salvando arquivos',
-    'Atualizando tabela de triagem',
-    'Tabela atualizada',
-    'Enviando notificação por email',
+    'Salvando markdown',
+    'Atualizando busca',
+    'Executando anonimização',
+    'Atualizando tabela',
     'Processo concluído'
   ]
   
